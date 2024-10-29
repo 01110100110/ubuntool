@@ -12,7 +12,7 @@ rollback_changes() {
     cp -R /etc/pam.d.bak/* /etc/pam.d/
     # Restart PAM-aware services
     service sshd restart
-    service nginx restart
+    #service nginx restart        Pretty sure nginx isnt supposed to be on the machine, Alejandro. This would return an error since it shouldve been removed
     # Add any other PAM-aware services that need to be restarted
     exit 1
 }
